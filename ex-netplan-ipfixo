@@ -1,0 +1,23 @@
+# Importante:Cutulo
+# Caminho: /etc/netplan/
+# Nome do arquivo: 50-cloud-init.yaml
+# Comandos uteis: netplan try e depois netplan apply
+####################################################
+# This file is generated from information provided by the datasource.  Changes
+# to it will not persist across an instance reboot.  To disable cloud-init's
+# network configuration capabilities, write a file
+# /etc/cloud/cloud.cfg.d/99-disable-network-config.cfg with the following:
+# network: {config: disabled}
+network:
+    ethernets:
+        eth0:
+            dhcp4: no
+            addresses: [xxx.xx.xxx.xxx/20]
+            gateway4: xxx.xx.xxx.x
+            nameservers:
+               addresses: [1.1.1.1,8.8.4.4]
+            match:
+                macaddress: xx:xx:xx:xx:xx:xx
+            set-name: eth0
+    version: 2
+    renderer: networkd
