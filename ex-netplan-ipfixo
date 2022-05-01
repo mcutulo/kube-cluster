@@ -1,4 +1,4 @@
-# Importante:Cutulo
+# Dica Importante
 # Caminho: /etc/netplan/
 # Nome do arquivo: 50-cloud-init.yaml
 # Comandos uteis: netplan try e depois netplan apply
